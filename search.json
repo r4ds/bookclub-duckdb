@@ -1,0 +1,340 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "This is a companion for DuckDB in Action by Mark Needham, Michael Hunger, and Michael Simons (Manning, copyright 2024, 9781633437258).\nEach chapter title to the left is a link to a slide deck.\n\nThese slides are being developed by this club.\nEach deck will open in its own tab.\nYou may want to type “s” at the start of each deck to open the speaker notes.\nJoin the Data Science Learning Community to participate in the discussion!\n\nWe follow the Data Science Learning Community Code of Conduct.",
+    "crumbs": [
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "10.html",
+    "href": "10.html",
+    "title": "10. Performance considerations for large datasets",
+    "section": "",
+    "text": "Performance considerations for large datasets\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "10. Performance considerations for large datasets"
+    ]
+  },
+  {
+    "objectID": "08.html",
+    "href": "08.html",
+    "title": "8. Building data pipelines with DuckDB",
+    "section": "",
+    "text": "Building data pipelines with DuckDB\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "8. Building data pipelines with DuckDB"
+    ]
+  },
+  {
+    "objectID": "06.html",
+    "href": "06.html",
+    "title": "6. Integrating with the Python ecosystem",
+    "section": "",
+    "text": "Integrating with the Python ecosystem\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "6. Integrating with the Python ecosystem"
+    ]
+  },
+  {
+    "objectID": "04.html",
+    "href": "04.html",
+    "title": "4. Advanced aggregation and analysis of data",
+    "section": "",
+    "text": "Advanced aggregation and analysis of data\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "4. Advanced aggregation and analysis of data"
+    ]
+  },
+  {
+    "objectID": "02.html",
+    "href": "02.html",
+    "title": "2. Getting started with DuckDB",
+    "section": "",
+    "text": "Getting started with DuckDB\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "2. Getting started with DuckDB"
+    ]
+  },
+  {
+    "objectID": "videos/01/01.html",
+    "href": "videos/01/01.html",
+    "title": "Cohort 1",
+    "section": "",
+    "text": "Meeting chat log\n\nADD_CHAT_LOG_HERE"
+  },
+  {
+    "objectID": "slides/10.html#learning-objectives",
+    "href": "slides/10.html#learning-objectives",
+    "title": "Performance considerations for large datasets",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/10.html#title",
+    "href": "slides/10.html#title",
+    "title": "Performance considerations for large datasets",
+    "section": "TITLE",
+    "text": "TITLE\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "slides/08.html#learning-objectives",
+    "href": "slides/08.html#learning-objectives",
+    "title": "Building data pipelines with DuckDB",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/08.html#title",
+    "href": "slides/08.html#title",
+    "title": "Building data pipelines with DuckDB",
+    "section": "TITLE",
+    "text": "TITLE\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "slides/06.html#learning-objectives",
+    "href": "slides/06.html#learning-objectives",
+    "title": "Integrating with the Python ecosystem",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/06.html#title",
+    "href": "slides/06.html#title",
+    "title": "Integrating with the Python ecosystem",
+    "section": "TITLE",
+    "text": "TITLE\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "slides/04.html#learning-objectives",
+    "href": "slides/04.html#learning-objectives",
+    "title": "Advanced aggregation and analysis of data",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/04.html#title",
+    "href": "slides/04.html#title",
+    "title": "Advanced aggregation and analysis of data",
+    "section": "TITLE",
+    "text": "TITLE\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "slides/02.html#learning-objectives",
+    "href": "slides/02.html#learning-objectives",
+    "title": "Getting started with DuckDB",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/02.html#title",
+    "href": "slides/02.html#title",
+    "title": "Getting started with DuckDB",
+    "section": "TITLE",
+    "text": "TITLE\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "slides/00.html#book-club-meetings",
+    "href": "slides/00.html#book-club-meetings",
+    "title": "Club meetings",
+    "section": "Book club meetings",
+    "text": "Book club meetings\n\nVolunteer leads discussion of a chapter\n\nThis is the best way to learn the material.\n\nPresentations:\n\nReview of material\nQuestions you have\nMaybe live demo\n\nMore info about editing: this github repo\nRecorded, available on the Data Science Learning Community YouTube Channel (DSLC.video)",
+    "crumbs": [
+      "Club meetings"
+    ]
+  },
+  {
+    "objectID": "slides/00.html#pace",
+    "href": "slides/00.html#pace",
+    "title": "Club meetings",
+    "section": "Pace",
+    "text": "Pace\n\nGoal: 1 chapter/week\nOk to split overwhelming chapters\nOk to combine short chapters\nMeet every week except holidays, etc\n\nWe will meet even if scheduled presenter unavailable\nPush to finish before Daylight Savings Madness March 8",
+    "crumbs": [
+      "Club meetings"
+    ]
+  },
+  {
+    "objectID": "slides/00.html#learning-objectives-los",
+    "href": "slides/00.html#learning-objectives-los",
+    "title": "Club meetings",
+    "section": "Learning objectives (LOs)",
+    "text": "Learning objectives (LOs)\n\nStudents who study with LOs in mind retain more\nTips:\n\nThink “After today’s session, you will be able to {LO}”\nVery roughly 1 per heading",
+    "crumbs": [
+      "Club meetings"
+    ]
+  },
+  {
+    "objectID": "slides/00.html#group-introductions",
+    "href": "slides/00.html#group-introductions",
+    "title": "Club meetings",
+    "section": "Group introductions",
+    "text": "Group introductions\n\nIf you feel comfortable sharing:\n\nWho are you?\nWhere you calling in from? (If you’re not comfortable sharing, skip)\nHow long have you been using R?\nWhat was your introduction to R?\nWhat are you most looking forward to during the club?",
+    "crumbs": [
+      "Club meetings"
+    ]
+  },
+  {
+    "objectID": "slides/01.html#los-for-the-entire-book",
+    "href": "slides/01.html#los-for-the-entire-book",
+    "title": "An introduction to DuckDB",
+    "section": "LOs for the entire book",
+    "text": "LOs for the entire book\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/01.html#los-for-this-chapter",
+    "href": "slides/01.html#los-for-this-chapter",
+    "title": "An introduction to DuckDB",
+    "section": "LOs for this chapter",
+    "text": "LOs for this chapter\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/01.html#title-for-individual-slide",
+    "href": "slides/01.html#title-for-individual-slide",
+    "title": "An introduction to DuckDB",
+    "section": "Title for Individual Slide",
+    "text": "Title for Individual Slide\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "slides/03.html#learning-objectives",
+    "href": "slides/03.html#learning-objectives",
+    "title": "Executing SQL queries",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/03.html#title",
+    "href": "slides/03.html#title",
+    "title": "Executing SQL queries",
+    "section": "TITLE",
+    "text": "TITLE\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "slides/05.html#learning-objectives",
+    "href": "slides/05.html#learning-objectives",
+    "title": "Exploring data without persistence",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/05.html#title",
+    "href": "slides/05.html#title",
+    "title": "Exploring data without persistence",
+    "section": "TITLE",
+    "text": "TITLE\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "slides/07.html#learning-objectives",
+    "href": "slides/07.html#learning-objectives",
+    "title": "DuckDB in the cloud with MotherDuck",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/07.html#title",
+    "href": "slides/07.html#title",
+    "title": "DuckDB in the cloud with MotherDuck",
+    "section": "TITLE",
+    "text": "TITLE\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "slides/09.html#learning-objectives",
+    "href": "slides/09.html#learning-objectives",
+    "title": "Building and deploying data apps",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/09.html#title",
+    "href": "slides/09.html#title",
+    "title": "Building and deploying data apps",
+    "section": "TITLE",
+    "text": "TITLE\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "slides/11.html#learning-objectives",
+    "href": "slides/11.html#learning-objectives",
+    "title": "Conclusion",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nFILL IN"
+  },
+  {
+    "objectID": "slides/11.html#title",
+    "href": "slides/11.html#title",
+    "title": "Conclusion",
+    "section": "TITLE",
+    "text": "TITLE\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+  },
+  {
+    "objectID": "01.html",
+    "href": "01.html",
+    "title": "1. An introduction to DuckDB",
+    "section": "",
+    "text": "No matching items",
+    "crumbs": [
+      "1. An introduction to DuckDB"
+    ]
+  },
+  {
+    "objectID": "01.html#meeting-videos",
+    "href": "01.html#meeting-videos",
+    "title": "1. An introduction to DuckDB",
+    "section": "Meeting videos",
+    "text": "Meeting videos\n\n\n\n\n\n\n\n\nCohort 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "1. An introduction to DuckDB"
+    ]
+  },
+  {
+    "objectID": "03.html",
+    "href": "03.html",
+    "title": "3. Executing SQL queries",
+    "section": "",
+    "text": "Executing SQL queries\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "3. Executing SQL queries"
+    ]
+  },
+  {
+    "objectID": "05.html",
+    "href": "05.html",
+    "title": "5. Exploring data without persistence",
+    "section": "",
+    "text": "Exploring data without persistence\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "5. Exploring data without persistence"
+    ]
+  },
+  {
+    "objectID": "07.html",
+    "href": "07.html",
+    "title": "7. DuckDB in the cloud with MotherDuck",
+    "section": "",
+    "text": "DuckDB in the cloud with MotherDuck\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "7. DuckDB in the cloud with MotherDuck"
+    ]
+  },
+  {
+    "objectID": "09.html",
+    "href": "09.html",
+    "title": "9. Building and deploying data apps",
+    "section": "",
+    "text": "Building and deploying data apps\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "9. Building and deploying data apps"
+    ]
+  },
+  {
+    "objectID": "11.html",
+    "href": "11.html",
+    "title": "11. Conclusion",
+    "section": "",
+    "text": "Conclusion\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "11. Conclusion"
+    ]
+  }
+]
