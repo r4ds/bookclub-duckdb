@@ -1,0 +1,24 @@
+---
+engine: knitr
+title: An introduction to DuckDB
+---
+
+# ️✅ Learning objectives
+
+## LOs for the entire book
+
+- FILL IN
+
+## LOs for this chapter
+
+- FILL IN
+
+# Title for Group of Slides
+
+## Title for Individual Slide
+
+- Slide-like content
+
+::: notes
+- Speaker notes for this slide
+:::

@@ -1,0 +1,16 @@
+---
+engine: knitr
+title: Performance considerations for large datasets
+---
+
+## Learning objectives
+
+- FILL IN
+
+## TITLE
+
+- Slide-like content
+
+::: notes
+- Speaker notes for this slide
+:::

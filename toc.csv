@@ -1,0 +1,13 @@
+number,title,number_wide
+0,Club meetings,00
+1,An introduction to DuckDB,01
+2,Getting started with DuckDB,02
+3,Executing SQL queries,03
+4,Advanced aggregation and analysis of data,04
+5,Exploring data without persistence,05
+6,Integrating with the Python ecosystem,06
+7,DuckDB in the cloud with MotherDuck,07
+8,Building data pipelines with DuckDB,08
+9,Building and deploying data apps,09
+10,Performance considerations for large datasets,10
+11,Conclusion,11

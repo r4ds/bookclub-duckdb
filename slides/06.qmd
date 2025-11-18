@@ -1,0 +1,16 @@
+---
+engine: knitr
+title: Integrating with the Python ecosystem
+---
+
+## Learning objectives
+
+- FILL IN
+
+## TITLE
+
+- Slide-like content
+
+::: notes
+- Speaker notes for this slide
+:::

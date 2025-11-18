@@ -1,0 +1,23 @@
+Type: Book
+Package: bookclub-duckdb
+Title: DuckDB in Action Book Club
+Version: 0.0.10
+Authors@R: c(
+  person(
+    "Data Science Learning Community",
+    email = "rfordatasci@gmail.com",
+    role = c("aut", "cre", "cph")
+  )
+  )
+License: CC BY NC SA 4.0
+URL: https://DSLC.io/duckdb, https://github.com/r4ds/bookclub-duckdb
+Depends:
+    R (>= 4.1.0)
+Imports: 
+    dplyr,
+    fs,
+    glue,
+    purrr,
+    readr,
+    rmarkdown,
+    yaml

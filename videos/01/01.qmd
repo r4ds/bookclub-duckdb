@@ -1,0 +1,13 @@
+---
+title: Cohort 1
+---
+
+{{< video https://www.youtube.com/embed/TBD >}}
+
+<details>
+
+<summary>Meeting chat log</summary>
+```
+ADD_CHAT_LOG_HERE
+```
+</details>

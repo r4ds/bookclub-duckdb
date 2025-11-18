@@ -1,0 +1,16 @@
+---
+engine: knitr
+title: Executing SQL queries
+---
+
+## Learning objectives
+
+- FILL IN
+
+## TITLE
+
+- Slide-like content
+
+::: notes
+- Speaker notes for this slide
+:::

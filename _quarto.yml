@@ -1,0 +1,46 @@
+project:
+  type: website
+  pre-render: generate_chapters.R
+  render:
+  - slides/*
+  - videos/*
+  - '*.qmd'
+format:
+  html:
+    theme:
+      dark: darkly
+      light: flatly
+    css: styles.css
+    toc: false
+    link-external-newwindow: true
+execute:
+  freeze: auto
+website:
+  title: DuckDB in Action Book Club
+  sidebar:
+    style: docked
+    search: true
+    tools:
+    - icon: github
+      href: https://github.com/r4ds/bookclub-duckdb
+    - icon: youtube
+      href: https://dslc.video/duckdb
+    - icon: mastodon
+      href: https://fosstodon.org/@DSLC
+    - icon: linkedin
+      href: https://www.linkedin.com/company/dslc-io
+    contents:
+    - index.qmd
+    - file: slides/00.qmd
+      target: duckdb_club-slides
+    - 01.qmd
+    - 02.qmd
+    - 03.qmd
+    - 04.qmd
+    - 05.qmd
+    - 06.qmd
+    - 07.qmd
+    - 08.qmd
+    - 09.qmd
+    - 10.qmd
+    - 11.qmd
