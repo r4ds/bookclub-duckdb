@@ -1,0 +1,1 @@
+Sitemap: https://r4ds.github.io/bookclub-duckdb/sitemap.xml
