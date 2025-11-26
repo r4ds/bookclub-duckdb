@@ -19,5 +19,6 @@ Imports:
     glue,
     purrr,
     readr,
+    reticulate (>= 1.44.1),
     rmarkdown,
     yaml
