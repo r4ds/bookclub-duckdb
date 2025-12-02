@@ -27,6 +27,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-5079db4132f0eaf0a29ac93fceccb8c9.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -134,47 +200,302 @@
 
 </section>
 <section>
-<section id="learning-objectives" class="title-slide slide level1 center">
-<h1>️✅ Learning objectives</h1>
+<section id="welcome" class="title-slide slide level1 center">
+<h1>️Welcome!</h1>
 
 </section>
-<section id="los-for-the-entire-book" class="slide level2">
-<h2>LOs for the entire book</h2>
+<section id="logistics" class="slide level2">
+<h2>Logistics</h2>
 <ul>
-<li>FILL IN</li>
+<li>All the important bookclub links are under Slack’s “Bookmarks” tab
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1B9WV0Iiv6XYDX49qKWuLkfiCrM0YUkfiCYB6NZH4DkY/edit?gid=0#gid=0">Claim a chapter</a></li>
+<li><a href="https://github.com/r4ds/bookclub-duckdb">Github repository</a></li>
+</ul></li>
+<li>Potential guest speakers</li>
 </ul>
 </section>
-<section id="los-for-this-chapter" class="slide level2">
-<h2>LOs for this chapter</h2>
+<section id="agenda" class="slide level2">
+<h2>Agenda</h2>
 <ul>
-<li>FILL IN</li>
+<li>Review Chapter 1</li>
+<li>Discuss the finer points of contributing to the bookclub github repository</li>
 </ul>
 </section></section>
 <section>
-<section id="title-for-group-of-slides" class="title-slide slide level1 center">
-<h1>Title for Group of Slides</h1>
+<section id="chapter-1" class="title-slide slide level1 center">
+<h1>Chapter 1</h1>
 
 </section>
-<section id="title-for-individual-slide" class="slide level2">
-<h2>Title for Individual Slide</h2>
+<section id="learning-goals" class="slide level2">
+<h2>Learning Goals</h2>
 <ul>
-<li>Slide-like content</li>
+<li>What is DuckDB and why bother learning to use it?</li>
 </ul>
-<aside class="notes">
+</section>
+<section id="basics" class="slide level2">
+<h2>Basics</h2>
 <ul>
-<li>Speaker notes for this slide</li>
+<li>DuckDB is a single-node, in-memory database that intergrates well into many places in the data pipeline.</li>
+<li>DuckDB is very fast - much faster than <code>dplyr</code> or <code>pandas</code> for data transformation.</li>
+<li>The DuckDB IP is owned by the Netherlands Stichting (non-profit) DuckDB Foundation.</li>
 </ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</section>
+<section id="how-fast" class="slide level2">
+<h2>How Fast?</h2>
+
+<img data-src="../assets/01/duckdb-5.png" class="r-stretch quarto-figure-center"><p class="caption">Source: DuckDB Labs</p></section>
+<section id="how-fast-1" class="slide level2">
+<h2>How Fast?</h2>
+
+<img data-src="../assets/01/duckdb-50.png" class="r-stretch quarto-figure-center"><p class="caption">Source: DuckDB Labs</p></section>
+<section id="where-does-duckdb-fit-in" class="slide level2">
+<h2>Where Does DuckDB Fit In?</h2>
+<ul>
+<li>DuckDB is an “in process” database - it runs in another application’s memory space, like R or Python.</li>
+<li>It can speed up traditional “small data” workloads by interfacing with R or Python libraries.</li>
+<li>It can extend local analysis to data of “a few hundred gigabytes”.</li>
+<li>It operate directly “at the edge” or “in the cloud.” For instance, it can analyze data stored in a cloud S3 bucket in-memory, avoiding costly transfer operations.</li>
+</ul>
+</section>
+<section id="where-does-duckdb-fit-in-1" class="slide level2">
+<h2>Where Does DuckDB Fit In?</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>How much data?</strong></p>
+</div>
+<div class="callout-content">
+<p>Despite being in-memory, DuckDB allows analyses to “spillover” into the hard disk. What are the limits of this fallback?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Which process?</strong></p>
+</div>
+<div class="callout-content">
+<p>What counts as a “process” for in-process? The authors discuss querying S3 files from a Cloud VM instance “in process” - is this a serverless deployment of Python? What’s the “process” for the DuckDB CLI?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="where-not-to-use-duckdb" class="slide level2">
+<h2>Where Not to Use DuckDB?</h2>
+<ul>
+<li>Tranformation and analysis of very large data sets</li>
+<li>“Steaming data” in real-time without batching first (but see this DuckDB Lab’s <a href="https://duckdb.org/2025/10/13/duckdb-streaming-patterns">blog post</a>)</li>
+<li>Applications involving concurrent writes - traditional databases are still best for this.</li>
+</ul>
+</section>
+<section id="how-can-i-use-duckdb" class="slide level2">
+<h2>How Can I use DuckDB?</h2>
+<ul>
+<li>Using SQL!</li>
+<li>DuckDB has R and Python APIs that mirror dplyr and pandas syntax.</li>
+<li>But the SQL API appears to get “first class” treatment.</li>
+</ul>
+</section>
+<section id="supported-file-types" class="slide level2">
+<h2>Supported File Types</h2>
+<ul>
+<li>Parquet*</li>
+<li>In-memory dataframes</li>
+<li>CSV</li>
+<li>JSON</li>
+<li>Apache Arrow columnar shaped data</li>
+<li>Cloud buckets like S3 or GCP</li>
+<li>DuckDB database format (.duckdb)</li>
+</ul>
+</section>
+<section id="duckdb-sql" class="slide level2">
+<h2>DuckDB SQL</h2>
+<ul>
+<li>Supported data structures include “traditional” SQL ones: <code>varchar</code>, <code>numeric</code>, etc.</li>
+<li>It also supports some data types not common for databases but well known in programming languaes: enums, lists, maps (dictionaries) and structs.</li>
+</ul>
+</section>
+<section id="duckdb-sql-1" class="slide level2">
+<h2>DuckDB SQL</h2>
+<ul>
+<li>DuckDB’s <a href="https://duckdb.org/docs/stable/sql/dialect/friendly_sql">Friendly SQL</a> eliminates some common SQL pain points.</li>
+<li>For instance, you can select of the columns in a table using <code>SELECT *</code> instead of enumerating every column name.</li>
+<li>DuckDB includes a range of aggregation functions, grouping functions, and support for SQL features like common table expressions.</li>
+</ul>
+</section></section>
+<section>
+<section id="interacting-with-bookclub-github-repository" class="title-slide slide level1 center">
+<h1>Interacting with Bookclub Github Repository</h1>
+
+</section>
+<section id="overview" class="slide level2">
+<h2>Overview</h2>
+<ul>
+<li>The repo is at https://github.com/r4ds/bookclub-duckdb</li>
+<li>We will write a “book” as we upload our presentations to this repo</li>
+<li>Under the hood, the bookclub repository uses quarto and github actions to render a slick website<br>
+</li>
+<li>The book covers a few different technologies. Here is how I have managed the Python, R and SQL dependencies</li>
+</ul>
+</section>
+<section id="fork-and-clone" class="slide level2">
+<h2>Fork and Clone</h2>
+<ul>
+<li><p>The repo contains excellent instructions for updating the repository using R and the <code>usethis</code> package.</p></li>
+<li><p>If you do not use R, the gist is to create a personal fork of the repository, make your changes to that fork, and then push your changges back to main repository.</p></li>
+<li><p>Make sure your fork is up to date with the main repository!</p></li>
+</ul>
+</section>
+<section id="edit-chapter-files" class="slide level2">
+<h2>Edit Chapter Files</h2>
+<ul>
+<li>You can edit the <code>.qmd</code> file for the the chapter you are presenting under <code>/slides/xx.qmd</code>.</li>
+<li>To render in a presentation-friendly, slideshow format use revealjs.</li>
+<li>From the command line:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">quarto</span> render ~/bookclub-duckdb/slides/01.qmd <span class="at">--to</span> revealjs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Or using the <code>YAML</code> header:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> revealjs</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>By default, slides render to <code>/_site/slides/xx.html</code></li>
+</ul>
+</section>
+<section id="dependency-management" class="slide level2">
+<h2>Dependency Management</h2>
+<ul>
+<li><p>To render the book chapters on your local machine, you need to load the R dependencies listed in the <code>DESCRIPTION</code> file. You need these even if your presentation has no R code in it.</p></li>
+<li><p>There are no Python dependencies right now, but once we hit that point we will record them in <code>pyproject.toml</code> in the repository.</p></li>
+</ul>
+</section>
+<section id="installing-r-dependencies" class="slide level2">
+<h2>Installing R dependencies</h2>
+<ul>
+<li>Here is an automated way to load the correct R dependencies using <code>pak</code> and <code>renv</code>:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="do">## Install pak and renv</span></span>
+<span id="cb3-2"><a></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"pak"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb3-3"><a></a><span class="fu">install.packages</span>(<span class="st">"pak"</span>, <span class="at">repos =</span> <span class="fu">sprintf</span>(</span>
+<span id="cb3-4"><a></a>  <span class="st">"https://r-lib.github.io/p/pak/stable/%s/%s/%s"</span>,</span>
+<span id="cb3-5"><a></a>  .Platform<span class="sc">$</span>pkgType,</span>
+<span id="cb3-6"><a></a>  <span class="fu">R.Version</span>()<span class="sc">$</span>os,</span>
+<span id="cb3-7"><a></a>  <span class="fu">R.Version</span>()<span class="sc">$</span>arch</span>
+<span id="cb3-8"><a></a>))</span>
+<span id="cb3-9"><a></a>}</span>
+<span id="cb3-10"><a></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"renv"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb3-11"><a></a>  pak<span class="sc">::</span><span class="fu">pkg_install</span>(<span class="st">"renv"</span>)</span>
+<span id="cb3-12"><a></a>}</span>
+<span id="cb3-13"><a></a><span class="do">## Configure renv to use pak to install packages</span></span>
+<span id="cb3-14"><a></a>renv<span class="sc">::</span>config<span class="sc">$</span><span class="fu">pak.enabled</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb3-15"><a></a><span class="do">## Configure renv to snapshot dependencies from the DESCRIPTION file</span></span>
+<span id="cb3-16"><a></a>renv<span class="sc">::</span>settings<span class="sc">$</span><span class="fu">snapshot.type</span>(<span class="st">"explicit"</span>)</span>
+<span id="cb3-17"><a></a></span>
+<span id="cb3-18"><a></a><span class="do">## Install the project dependencies</span></span>
+<span id="cb3-19"><a></a>pak<span class="sc">::</span><span class="fu">pkg_install</span>(renv<span class="sc">::</span><span class="fu">dependencies</span>(<span class="at">path =</span> <span class="st">"DESCRIPTION"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="installing-python-dependencies" class="slide level2">
+<h2>Installing Python dependencies</h2>
+<ul>
+<li>If you add any Python code to your presentation, you will need to add Python dependencies.</li>
+<li>An easy way to do this is to <a href="https://docs.astral.sh/uv/getting-started/installation/">install UV</a></li>
+<li>You can sync your local machine with the Python dependencies:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="ex">uv</span> sync</span>
+<span id="cb4-2"><a></a><span class="bu">source</span> .venv/bin/activate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="adding-packages" class="slide level2">
+<h2>Adding Packages</h2>
+<ul>
+<li>If you add any new R or Python packages to your local repository, you should make sure those dependencies get reflected in the main repository.</li>
+<li>If you add R dependencies, make sure to update <code>DESCRIPTION</code> and commit the changes</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>usethis<span class="sc">::</span><span class="fu">use_package</span>(<span class="st">"duckdb"</span>, <span class="at">min_version =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>If you add Python dependencies, make sure to update <code>pyproject.toml</code> (UV does this automatically)</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="co"># install AND update pyproject.toml</span></span>
+<span id="cb6-2"><a></a><span class="ex">uv</span> add duckdb </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="adding-packages-1" class="slide level2">
+<h2>Adding Packages</h2>
+<ul>
+<li>Generally, with this setup you should commit and push changes to <code>pyproject.toml</code> and <code>DESCRIPTION</code>, but <em>not</em> changes to <code>renv.lock</code> and <code>uv.lock</code></li>
+</ul>
+</section>
+<section id="sql-chunks-in-quarto" class="slide level2">
+<h2>SQL Chunks in Quarto</h2>
+<ul>
+<li>Quarto can execute SQL code chunks if we provide it an appropriate database backend (thanks to <a href="https://danielroelfs.com/posts/sql-notebooks-with-quarto/">this blog post</a>).</li>
+<li>You can define the database in R or Python, and then pass it as a quarto chunk option.</li>
+<li>To create the database connection in R or Python:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>con_flights <span class="ot">&lt;-</span> con_flights <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(</span>
+<span id="cb7-2"><a></a>  <span class="at">drv =</span> duckdb<span class="sc">::</span><span class="fu">duckdb</span>(),</span>
+<span id="cb7-3"><a></a>  <span class="at">dbdir =</span> <span class="st">"./data/flights.duckdb"</span>,</span>
+<span id="cb7-4"><a></a>  <span class="at">read_only =</span> <span class="cn">TRUE</span></span>
+<span id="cb7-5"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>or, in Python</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">import</span> duckdb</span>
+<span id="cb8-2"><a></a>con_flights <span class="op">=</span> duckdb.<span class="ex">connect</span>(<span class="st">'flights.duckdb'</span>, read_only<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="sql-chunks-in-quarto-1" class="slide level2">
+<h2>SQL Chunks in Quarto</h2>
+<p>Then, to create the chunk:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a><span class="in">```{sql}</span></span>
+<span id="cb9-2"><a></a><span class="co">#| eval: false</span></span>
+<span id="cb9-3"><a></a><span class="co">#| connection: con_flights</span></span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a><span class="kw">SELECT</span> name, carrier <span class="kw">FROM</span> airlines <span class="kw">LIMIT</span> <span class="dv">10</span>;</span>
+<span id="cb9-6"><a></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="quarto-execution-option---freeze" class="slide level2">
+<h2>Quarto Execution Option - Freeze</h2>
+<ul>
+<li><p>The book covers a lot different technolgies, and we may tire of troubleshooting dependencies in the main repo.</p></li>
+<li><p>Quarto’s “freeze” option is a quick fix to this issue. It will tell the rendering pipeline in the main repo not to render that chapter and instead pull the .html file from <code>_freeze/slides/xx/</code>.</p></li>
+<li><p>In the top level YAML, use:</p></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="co"># | echo: true</span></span>
+<span id="cb10-2"><a></a><span class="co"># | eval: false</span></span>
+<span id="cb10-3"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb10-4"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>If you use this method, make sure sure to commit changes to <code>_freeze/slides/xx</code> to the repository!</li>
+</ul>
+</section>
+<section id="next-week" class="slide level2">
+<h2>Next week</h2>
+<ul>
+<li>Chapter 2 is quite short and Chapter 3 is longer - should we bundle/split?</li>
+</ul>
 
 
 </section></section>

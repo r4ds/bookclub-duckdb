@@ -177,25 +177,179 @@
     ]
   },
   {
-    "objectID": "slides/01.html#los-for-the-entire-book",
-    "href": "slides/01.html#los-for-the-entire-book",
+    "objectID": "slides/01.html#logistics",
+    "href": "slides/01.html#logistics",
     "title": "An introduction to DuckDB",
-    "section": "LOs for the entire book",
-    "text": "LOs for the entire book\n\nFILL IN"
+    "section": "Logistics",
+    "text": "Logistics\n\nAll the important bookclub links are under Slack’s “Bookmarks” tab\n\nClaim a chapter\nGithub repository\n\nPotential guest speakers"
   },
   {
-    "objectID": "slides/01.html#los-for-this-chapter",
-    "href": "slides/01.html#los-for-this-chapter",
+    "objectID": "slides/01.html#agenda",
+    "href": "slides/01.html#agenda",
     "title": "An introduction to DuckDB",
-    "section": "LOs for this chapter",
-    "text": "LOs for this chapter\n\nFILL IN"
+    "section": "Agenda",
+    "text": "Agenda\n\nReview Chapter 1\nDiscuss the finer points of contributing to the bookclub github repository"
   },
   {
-    "objectID": "slides/01.html#title-for-individual-slide",
-    "href": "slides/01.html#title-for-individual-slide",
+    "objectID": "slides/01.html#learning-goals",
+    "href": "slides/01.html#learning-goals",
     "title": "An introduction to DuckDB",
-    "section": "Title for Individual Slide",
-    "text": "Title for Individual Slide\n\nSlide-like content\n\n\n\nSpeaker notes for this slide"
+    "section": "Learning Goals",
+    "text": "Learning Goals\n\nWhat is DuckDB and why bother learning to use it?"
+  },
+  {
+    "objectID": "slides/01.html#basics",
+    "href": "slides/01.html#basics",
+    "title": "An introduction to DuckDB",
+    "section": "Basics",
+    "text": "Basics\n\nDuckDB is a single-node, in-memory database that intergrates well into many places in the data pipeline.\nDuckDB is very fast - much faster than dplyr or pandas for data transformation.\nThe DuckDB IP is owned by the Netherlands Stichting (non-profit) DuckDB Foundation."
+  },
+  {
+    "objectID": "slides/01.html#how-fast",
+    "href": "slides/01.html#how-fast",
+    "title": "An introduction to DuckDB",
+    "section": "How Fast?",
+    "text": "How Fast?\n\nSource: DuckDB Labs"
+  },
+  {
+    "objectID": "slides/01.html#how-fast-1",
+    "href": "slides/01.html#how-fast-1",
+    "title": "An introduction to DuckDB",
+    "section": "How Fast?",
+    "text": "How Fast?\n\nSource: DuckDB Labs"
+  },
+  {
+    "objectID": "slides/01.html#where-does-duckdb-fit-in",
+    "href": "slides/01.html#where-does-duckdb-fit-in",
+    "title": "An introduction to DuckDB",
+    "section": "Where Does DuckDB Fit In?",
+    "text": "Where Does DuckDB Fit In?\n\nDuckDB is an “in process” database - it runs in another application’s memory space, like R or Python.\nIt can speed up traditional “small data” workloads by interfacing with R or Python libraries.\nIt can extend local analysis to data of “a few hundred gigabytes”.\nIt operate directly “at the edge” or “in the cloud.” For instance, it can analyze data stored in a cloud S3 bucket in-memory, avoiding costly transfer operations."
+  },
+  {
+    "objectID": "slides/01.html#where-does-duckdb-fit-in-1",
+    "href": "slides/01.html#where-does-duckdb-fit-in-1",
+    "title": "An introduction to DuckDB",
+    "section": "Where Does DuckDB Fit In?",
+    "text": "Where Does DuckDB Fit In?\n\n\n\n\n\n\nHow much data?\n\n\nDespite being in-memory, DuckDB allows analyses to “spillover” into the hard disk. What are the limits of this fallback?\n\n\n\n\n\n\n\n\n\nWhich process?\n\n\nWhat counts as a “process” for in-process? The authors discuss querying S3 files from a Cloud VM instance “in process” - is this a serverless deployment of Python? What’s the “process” for the DuckDB CLI?"
+  },
+  {
+    "objectID": "slides/01.html#where-not-to-use-duckdb",
+    "href": "slides/01.html#where-not-to-use-duckdb",
+    "title": "An introduction to DuckDB",
+    "section": "Where Not to Use DuckDB?",
+    "text": "Where Not to Use DuckDB?\n\nTranformation and analysis of very large data sets\n“Steaming data” in real-time without batching first (but see this DuckDB Lab’s blog post)\nApplications involving concurrent writes - traditional databases are still best for this."
+  },
+  {
+    "objectID": "slides/01.html#how-can-i-use-duckdb",
+    "href": "slides/01.html#how-can-i-use-duckdb",
+    "title": "An introduction to DuckDB",
+    "section": "How Can I use DuckDB?",
+    "text": "How Can I use DuckDB?\n\nUsing SQL!\nDuckDB has R and Python APIs that mirror dplyr and pandas syntax.\nBut the SQL API appears to get “first class” treatment."
+  },
+  {
+    "objectID": "slides/01.html#supported-file-types",
+    "href": "slides/01.html#supported-file-types",
+    "title": "An introduction to DuckDB",
+    "section": "Supported File Types",
+    "text": "Supported File Types\n\nParquet*\nIn-memory dataframes\nCSV\nJSON\nApache Arrow columnar shaped data\nCloud buckets like S3 or GCP\nDuckDB database format (.duckdb)"
+  },
+  {
+    "objectID": "slides/01.html#duckdb-sql",
+    "href": "slides/01.html#duckdb-sql",
+    "title": "An introduction to DuckDB",
+    "section": "DuckDB SQL",
+    "text": "DuckDB SQL\n\nSupported data structures include “traditional” SQL ones: varchar, numeric, etc.\nIt also supports some data types not common for databases but well known in programming languaes: enums, lists, maps (dictionaries) and structs."
+  },
+  {
+    "objectID": "slides/01.html#duckdb-sql-1",
+    "href": "slides/01.html#duckdb-sql-1",
+    "title": "An introduction to DuckDB",
+    "section": "DuckDB SQL",
+    "text": "DuckDB SQL\n\nDuckDB’s Friendly SQL eliminates some common SQL pain points.\nFor instance, you can select of the columns in a table using SELECT * instead of enumerating every column name.\nDuckDB includes a range of aggregation functions, grouping functions, and support for SQL features like common table expressions."
+  },
+  {
+    "objectID": "slides/01.html#overview",
+    "href": "slides/01.html#overview",
+    "title": "An introduction to DuckDB",
+    "section": "Overview",
+    "text": "Overview\n\nThe repo is at https://github.com/r4ds/bookclub-duckdb\nWe will write a “book” as we upload our presentations to this repo\nUnder the hood, the bookclub repository uses quarto and github actions to render a slick website\n\nThe book covers a few different technologies. Here is how I have managed the Python, R and SQL dependencies"
+  },
+  {
+    "objectID": "slides/01.html#fork-and-clone",
+    "href": "slides/01.html#fork-and-clone",
+    "title": "An introduction to DuckDB",
+    "section": "Fork and Clone",
+    "text": "Fork and Clone\n\nThe repo contains excellent instructions for updating the repository using R and the usethis package.\nIf you do not use R, the gist is to create a personal fork of the repository, make your changes to that fork, and then push your changges back to main repository.\nMake sure your fork is up to date with the main repository!"
+  },
+  {
+    "objectID": "slides/01.html#edit-chapter-files",
+    "href": "slides/01.html#edit-chapter-files",
+    "title": "An introduction to DuckDB",
+    "section": "Edit Chapter Files",
+    "text": "Edit Chapter Files\n\nYou can edit the .qmd file for the the chapter you are presenting under /slides/xx.qmd.\nTo render in a presentation-friendly, slideshow format use revealjs.\nFrom the command line:\n\n\nquarto render ~/bookclub-duckdb/slides/01.qmd --to revealjs\n\n\nOr using the YAML header:\n\n\nformat: revealjs\n\n\nBy default, slides render to /_site/slides/xx.html"
+  },
+  {
+    "objectID": "slides/01.html#dependency-management",
+    "href": "slides/01.html#dependency-management",
+    "title": "An introduction to DuckDB",
+    "section": "Dependency Management",
+    "text": "Dependency Management\n\nTo render the book chapters on your local machine, you need to load the R dependencies listed in the DESCRIPTION file. You need these even if your presentation has no R code in it.\nThere are no Python dependencies right now, but once we hit that point we will record them in pyproject.toml in the repository."
+  },
+  {
+    "objectID": "slides/01.html#installing-r-dependencies",
+    "href": "slides/01.html#installing-r-dependencies",
+    "title": "An introduction to DuckDB",
+    "section": "Installing R dependencies",
+    "text": "Installing R dependencies\n\nHere is an automated way to load the correct R dependencies using pak and renv:\n\n\n## Install pak and renv\nif (!requireNamespace(\"pak\", quietly = TRUE)) {\ninstall.packages(\"pak\", repos = sprintf(\n  \"https://r-lib.github.io/p/pak/stable/%s/%s/%s\",\n  .Platform$pkgType,\n  R.Version()$os,\n  R.Version()$arch\n))\n}\nif (!requireNamespace(\"renv\", quietly = TRUE)) {\n  pak::pkg_install(\"renv\")\n}\n## Configure renv to use pak to install packages\nrenv::config$pak.enabled(TRUE)\n## Configure renv to snapshot dependencies from the DESCRIPTION file\nrenv::settings$snapshot.type(\"explicit\")\n\n## Install the project dependencies\npak::pkg_install(renv::dependencies(path = \"DESCRIPTION\"))"
+  },
+  {
+    "objectID": "slides/01.html#installing-python-dependencies",
+    "href": "slides/01.html#installing-python-dependencies",
+    "title": "An introduction to DuckDB",
+    "section": "Installing Python dependencies",
+    "text": "Installing Python dependencies\n\nIf you add any Python code to your presentation, you will need to add Python dependencies.\nAn easy way to do this is to install UV\nYou can sync your local machine with the Python dependencies:\n\n\nuv sync\nsource .venv/bin/activate"
+  },
+  {
+    "objectID": "slides/01.html#adding-packages",
+    "href": "slides/01.html#adding-packages",
+    "title": "An introduction to DuckDB",
+    "section": "Adding Packages",
+    "text": "Adding Packages\n\nIf you add any new R or Python packages to your local repository, you should make sure those dependencies get reflected in the main repository.\nIf you add R dependencies, make sure to update DESCRIPTION and commit the changes\n\n\nusethis::use_package(\"duckdb\", min_version = TRUE)\n\n\nIf you add Python dependencies, make sure to update pyproject.toml (UV does this automatically)\n\n\n# install AND update pyproject.toml\nuv add duckdb"
+  },
+  {
+    "objectID": "slides/01.html#adding-packages-1",
+    "href": "slides/01.html#adding-packages-1",
+    "title": "An introduction to DuckDB",
+    "section": "Adding Packages",
+    "text": "Adding Packages\n\nGenerally, with this setup you should commit and push changes to pyproject.toml and DESCRIPTION, but not changes to renv.lock and uv.lock"
+  },
+  {
+    "objectID": "slides/01.html#sql-chunks-in-quarto",
+    "href": "slides/01.html#sql-chunks-in-quarto",
+    "title": "An introduction to DuckDB",
+    "section": "SQL Chunks in Quarto",
+    "text": "SQL Chunks in Quarto\n\nQuarto can execute SQL code chunks if we provide it an appropriate database backend (thanks to this blog post).\nYou can define the database in R or Python, and then pass it as a quarto chunk option.\nTo create the database connection in R or Python:\n\n\ncon_flights &lt;- con_flights &lt;- DBI::dbConnect(\n  drv = duckdb::duckdb(),\n  dbdir = \"./data/flights.duckdb\",\n  read_only = TRUE\n)\n\nor, in Python\n\nimport duckdb\ncon_flights = duckdb.connect('flights.duckdb', read_only=True)"
+  },
+  {
+    "objectID": "slides/01.html#sql-chunks-in-quarto-1",
+    "href": "slides/01.html#sql-chunks-in-quarto-1",
+    "title": "An introduction to DuckDB",
+    "section": "SQL Chunks in Quarto",
+    "text": "SQL Chunks in Quarto\nThen, to create the chunk:\n\n```{sql}\n#| eval: false\n#| connection: con_flights\n\nSELECT name, carrier FROM airlines LIMIT 10;\n```"
+  },
+  {
+    "objectID": "slides/01.html#quarto-execution-option---freeze",
+    "href": "slides/01.html#quarto-execution-option---freeze",
+    "title": "An introduction to DuckDB",
+    "section": "Quarto Execution Option - Freeze",
+    "text": "Quarto Execution Option - Freeze\n\nThe book covers a lot different technolgies, and we may tire of troubleshooting dependencies in the main repo.\nQuarto’s “freeze” option is a quick fix to this issue. It will tell the rendering pipeline in the main repo not to render that chapter and instead pull the .html file from _freeze/slides/xx/.\nIn the top level YAML, use:\n\n\n# | echo: true\n# | eval: false\nexecute:\n  freeze: true\n\n\nIf you use this method, make sure sure to commit changes to _freeze/slides/xx to the repository!"
+  },
+  {
+    "objectID": "slides/01.html#next-week",
+    "href": "slides/01.html#next-week",
+    "title": "An introduction to DuckDB",
+    "section": "Next week",
+    "text": "Next week\n\nChapter 2 is quite short and Chapter 3 is longer - should we bundle/split?"
   },
   {
     "objectID": "slides/03.html#learning-objectives",
