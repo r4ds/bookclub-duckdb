@@ -1,24 +1,239 @@
 ---
-engine: knitr
 title: An introduction to DuckDB
 ---
 
-# ️✅ Learning objectives
+# ️Welcome!
 
-## LOs for the entire book
+## Logistics
+- All the important bookclub links are under Slack's "Bookmarks" tab 
+    - [Claim a chapter](https://docs.google.com/spreadsheets/d/1B9WV0Iiv6XYDX49qKWuLkfiCrM0YUkfiCYB6NZH4DkY/edit?gid=0#gid=0)
+    - [Github repository](https://github.com/r4ds/bookclub-duckdb)
+- Potential guest speakers
 
-- FILL IN
+## Agenda
+- Review Chapter 1
+- Discuss the finer points of contributing to the bookclub github repository
 
-## LOs for this chapter
+# Chapter 1 
 
-- FILL IN
+## Learning Goals
 
-# Title for Group of Slides
+- What is DuckDB and why bother learning to use it? 
 
-## Title for Individual Slide
+## Basics
 
-- Slide-like content
+- DuckDB is a single-node, in-memory database that intergrates well into many places in the data pipeline. 
+- DuckDB is very fast - much faster than `dplyr` or `pandas` for data transformation.
+- The DuckDB IP is owned by the Netherlands Stichting (non-profit) DuckDB Foundation.
 
-::: notes
-- Speaker notes for this slide
+## How Fast?
+![Source: DuckDB Labs](/assets/01/duckdb-5.png)
+
+## How Fast?
+
+![Source: DuckDB Labs](/assets/01/duckdb-50.png)
+
+## Where Does DuckDB Fit In?
+
+- DuckDB is an "in process" database - it runs in another application's memory space, like R or Python.
+- It can speed up traditional "small data" workloads by interfacing with R or Python libraries.
+- It can extend local analysis to data of "a few hundred gigabytes".
+- It operate directly "at the edge" or "in the cloud." For instance, it can analyze data stored in a cloud S3 bucket in-memory, avoiding costly transfer operations.
+
+## Where Does DuckDB Fit In?
+
+::: {.callout-tip}
+# How much data?
+Despite being in-memory, DuckDB allows analyses to "spillover" into the hard disk. What are the limits of this fallback?
 :::
+
+::: {.callout-tip}
+# Which process?
+What counts as a "process" for in-process? The authors discuss querying S3 files from a Cloud VM instance "in process" - is this a serverless deployment of Python? What's the "process" for the DuckDB CLI? 
+::: 
+
+## Where Not to Use DuckDB?
+
+- Tranformation and analysis of very large data sets 
+- "Steaming data" in real-time without batching first (but see this DuckDB Lab's [blog post](https://duckdb.org/2025/10/13/duckdb-streaming-patterns))
+- Applications involving concurrent writes - traditional databases are still best for this.
+
+## How Can I use DuckDB?
+
+- Using SQL!
+- DuckDB has R and Python APIs that mirror dplyr and pandas syntax. 
+- But the SQL API appears to get "first class" treatment.
+
+## Supported File Types
+
+- Parquet*
+- In-memory dataframes
+- CSV 
+- JSON
+- Apache Arrow columnar shaped data
+- Cloud buckets like S3 or GCP
+- DuckDB database format (.duckdb)
+
+## DuckDB SQL
+- Supported data structures include "traditional" SQL ones: `varchar`, `numeric`, etc.
+- It also supports some data types not common for databases but well known in programming languaes: enums, lists, maps (dictionaries) and structs.
+
+## DuckDB SQL
+- DuckDB's [Friendly SQL](https://duckdb.org/docs/stable/sql/dialect/friendly_sql) eliminates some common SQL pain points.
+- For instance, you can select of the columns in a table using `SELECT *` instead of enumerating every column name.
+- DuckDB includes a range of aggregation functions, grouping functions, and support for SQL features like common table expressions.
+
+# Interacting with Bookclub Github Repository
+
+## Overview
+- The repo is at https://github.com/r4ds/bookclub-duckdb
+- We will write a "book" as we upload our presentations to this repo
+- Under the hood, the bookclub repository uses quarto and github actions to render a slick website  
+- The book covers a few different technologies. Here is how I have managed the Python, R and SQL dependencies 
+
+## Fork and Clone
+
+- The repo contains excellent instructions for updating the repository using R and the `usethis` package.
+
+- If you do not use R, the gist is to create a personal fork of the repository, make your changes to that fork, and then push your changges back to main repository.
+
+- Make sure your fork is up to date with the main repository!
+
+## Edit Chapter Files
+
+- You can edit the `.qmd` file for the the chapter you are presenting under `/slides/xx.qmd`.
+- To render in a presentation-friendly, slideshow format use revealjs.
+- From the command line:
+```{bash}
+#| eval: FALSE
+#| echo: TRUE
+quarto render ~/bookclub-duckdb/slides/01.qmd --to revealjs
+```
+- Or using the `YAML` header:
+
+```{yaml}
+format: revealjs
+```
+
+- By default, slides render to `/_site/slides/xx.html`
+
+## Dependency Management   
+
+- To render the book chapters on your local machine, you need to load the R dependencies listed in the `DESCRIPTION` file. You need these even if your presentation has no R code in it. 
+
+- There are no Python dependencies right now, but once we hit that point we will record them in `pyproject.toml` in the repository.
+
+## Installing R dependencies
+
+- Here is an automated way to load the correct R dependencies using `pak` and `renv`:
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Install pak and renv
+if (!requireNamespace("pak", quietly = TRUE)) {
+install.packages("pak", repos = sprintf(
+  "https://r-lib.github.io/p/pak/stable/%s/%s/%s",
+  .Platform$pkgType,
+  R.Version()$os,
+  R.Version()$arch
+))
+}
+if (!requireNamespace("renv", quietly = TRUE)) {
+  pak::pkg_install("renv")
+}
+## Configure renv to use pak to install packages
+renv::config$pak.enabled(TRUE)
+## Configure renv to snapshot dependencies from the DESCRIPTION file
+renv::settings$snapshot.type("explicit")
+
+## Install the project dependencies
+pak::pkg_install(renv::dependencies(path = "DESCRIPTION"))
+```
+
+## Installing Python dependencies 
+- If you add any Python code to your presentation, you will need to add Python dependencies. 
+- An easy way to do this is to [install UV](https://docs.astral.sh/uv/getting-started/installation/)
+- You can sync your local machine with the Python dependencies:
+```{bash}
+#| echo: true
+#| eval: false
+uv sync
+source .venv/bin/activate
+```
+
+## Adding Packages
+
+- If you add any new R or Python packages to your local repository, you should make sure those dependencies get reflected in the main repository.
+- If you add R dependencies, make sure to update `DESCRIPTION` and commit the changes
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+usethis::use_package("duckdb", min_version = TRUE)
+```
+
+- If you add Python dependencies, make sure to update `pyproject.toml` (UV does this automatically)
+
+```{bash}
+#| echo: TRUE
+#| eval: FALSE
+# install AND update pyproject.toml
+uv add duckdb 
+```
+
+## Adding Packages
+- Generally, with this setup you should commit and push changes to `pyproject.toml` and `DESCRIPTION`, but *not* changes to `renv.lock` and `uv.lock`
+
+## SQL Chunks in Quarto
+- Quarto can execute SQL code chunks if we provide it an appropriate database backend (thanks to [this blog post](https://danielroelfs.com/posts/sql-notebooks-with-quarto/)).
+- You can define the database in R or Python, and then pass it as a quarto chunk option.
+- To create the database connection in R or Python:
+```{r}
+#| echo: true
+#| eval: false
+con_flights <- con_flights <- DBI::dbConnect(
+  drv = duckdb::duckdb(),
+  dbdir = "./data/flights.duckdb",
+  read_only = TRUE
+)
+```
+
+or, in Python 
+
+```{python}
+#| echo: true
+#| eval: false
+import duckdb
+con_flights = duckdb.connect('flights.duckdb', read_only=True)
+```
+
+## SQL Chunks in Quarto
+Then, to create the chunk:
+
+```{sql}
+#| echo: fenced
+#| eval: false
+#| connection: con_flights
+
+SELECT name, carrier FROM airlines LIMIT 10;
+```
+
+## Quarto Execution Option - Freeze
+
+- The book covers a lot different technolgies, and we may tire of troubleshooting dependencies in the main repo.
+
+- Quarto's "freeze" option is a quick fix to this issue. It will tell the rendering pipeline in the main repo not to render that chapter and instead pull the .html file from `_freeze/slides/xx/`.
+
+- In the top level YAML, use:
+```{yaml}
+# | echo: true
+# | eval: false
+execute:
+  freeze: true
+```
+
+- If you use this method, make sure sure to commit changes to `_freeze/slides/xx` to the repository! 
+
+## Next week
+- Chapter 2 is quite short and Chapter 3 is longer - should we bundle/split?
