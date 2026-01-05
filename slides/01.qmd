@@ -1,4 +1,5 @@
 ---
+engine: knitr
 title: An introduction to DuckDB
 ---
 
@@ -104,9 +105,7 @@ What counts as a "process" for in-process? The authors discuss querying S3 files
 - You can edit the `.qmd` file for the the chapter you are presenting under `/slides/xx.qmd`.
 - To render in a presentation-friendly, slideshow format use revealjs.
 - From the command line:
-```{bash}
-#| eval: FALSE
-#| echo: TRUE
+```bash
 quarto render ~/bookclub-duckdb/slides/01.qmd --to revealjs
 ```
 - Or using the `YAML` header:
@@ -156,9 +155,7 @@ pak::pkg_install(renv::dependencies(path = "DESCRIPTION"))
 - If you add any Python code to your presentation, you will need to add Python dependencies. 
 - An easy way to do this is to [install UV](https://docs.astral.sh/uv/getting-started/installation/)
 - You can sync your local machine with the Python dependencies:
-```{bash}
-#| echo: true
-#| eval: false
+```bash
 uv sync
 source .venv/bin/activate
 ```
@@ -175,9 +172,7 @@ usethis::use_package("duckdb", min_version = TRUE)
 
 - If you add Python dependencies, make sure to update `pyproject.toml` (UV does this automatically)
 
-```{bash}
-#| echo: TRUE
-#| eval: FALSE
+```bash
 # install AND update pyproject.toml
 uv add duckdb 
 ```
@@ -211,24 +206,18 @@ con_flights = duckdb.connect('flights.duckdb', read_only=True)
 ## SQL Chunks in Quarto
 Then, to create the chunk:
 
-```{sql}
-#| echo: fenced
-#| eval: false
-#| connection: con_flights
-
+```sql
 SELECT name, carrier FROM airlines LIMIT 10;
 ```
 
 ## Quarto Execution Option - Freeze
 
-- The book covers a lot different technolgies, and we may tire of troubleshooting dependencies in the main repo.
+- The book covers a lot different technologies, and we may tire of troubleshooting dependencies in the main repo.
 
 - Quarto's "freeze" option is a quick fix to this issue. It will tell the rendering pipeline in the main repo not to render that chapter and instead pull the .html file from `_freeze/slides/xx/`.
 
 - In the top level YAML, use:
-```{yaml}
-# | echo: true
-# | eval: false
+```yaml
 execute:
   freeze: true
 ```
