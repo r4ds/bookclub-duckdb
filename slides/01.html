@@ -360,9 +360,7 @@
 <li>To render in a presentation-friendly, slideshow format use revealjs.</li>
 <li>From the command line:</li>
 </ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">quarto</span> render ~/bookclub-duckdb/slides/01.qmd <span class="at">--to</span> revealjs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">quarto</span> render ~/bookclub-duckdb/slides/01.qmd <span class="at">--to</span> revealjs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Or using the <code>YAML</code> header:</li>
 </ul>
@@ -414,10 +412,8 @@
 <li>An easy way to do this is to <a href="https://docs.astral.sh/uv/getting-started/installation/">install UV</a></li>
 <li>You can sync your local machine with the Python dependencies:</li>
 </ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="ex">uv</span> sync</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="ex">uv</span> sync</span>
 <span id="cb4-2"><a></a><span class="bu">source</span> .venv/bin/activate</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 </section>
 <section id="adding-packages" class="slide level2">
 <h2>Adding Packages</h2>
@@ -431,10 +427,8 @@
 <ul>
 <li>If you add Python dependencies, make sure to update <code>pyproject.toml</code> (UV does this automatically)</li>
 </ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="co"># install AND update pyproject.toml</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="co"># install AND update pyproject.toml</span></span>
 <span id="cb6-2"><a></a><span class="ex">uv</span> add duckdb </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 </section>
 <section id="adding-packages-1" class="slide level2">
 <h2>Adding Packages</h2>
@@ -465,28 +459,17 @@
 <section id="sql-chunks-in-quarto-1" class="slide level2">
 <h2>SQL Chunks in Quarto</h2>
 <p>Then, to create the chunk:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a><span class="in">```{sql}</span></span>
-<span id="cb9-2"><a></a><span class="co">#| eval: false</span></span>
-<span id="cb9-3"><a></a><span class="co">#| connection: con_flights</span></span>
-<span id="cb9-4"><a></a></span>
-<span id="cb9-5"><a></a><span class="kw">SELECT</span> name, carrier <span class="kw">FROM</span> airlines <span class="kw">LIMIT</span> <span class="dv">10</span>;</span>
-<span id="cb9-6"><a></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a></a><span class="kw">SELECT</span> name, carrier <span class="kw">FROM</span> airlines <span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="quarto-execution-option---freeze" class="slide level2">
 <h2>Quarto Execution Option - Freeze</h2>
 <ul>
-<li><p>The book covers a lot different technolgies, and we may tire of troubleshooting dependencies in the main repo.</p></li>
+<li><p>The book covers a lot different technologies, and we may tire of troubleshooting dependencies in the main repo.</p></li>
 <li><p>Quarto’s “freeze” option is a quick fix to this issue. It will tell the rendering pipeline in the main repo not to render that chapter and instead pull the .html file from <code>_freeze/slides/xx/</code>.</p></li>
 <li><p>In the top level YAML, use:</p></li>
 </ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="co"># | echo: true</span></span>
-<span id="cb10-2"><a></a><span class="co"># | eval: false</span></span>
-<span id="cb10-3"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb10-4"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb10-2"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>If you use this method, make sure sure to commit changes to <code>_freeze/slides/xx</code> to the repository!</li>
 </ul>
