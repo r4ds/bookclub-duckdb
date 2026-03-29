@@ -11,7 +11,7 @@ As we read, we are producing [slides about the book](https://dslc.io/duckdb).
 
 If you would like to present, please see the schedule sign-up sheet for your cohort (linked below, and pinned in the [#book_club-duckdb](https://dslcio.slack.com/archives/C010GJ3VAE5) channel on Slack).
 
-- Cohort 1 (facilitator: @cory): [Wednesdays 3pm central](https://www.timeanddate.com/worldclock/converter.html?iso=20251203T210000&p1=24&p2=1440) | [schedule](https://docs.google.com/spreadsheets/d/1B9WV0Iiv6XYDX49qKWuLkfiCrM0YUkfiCYB6NZH4DkY/edit?usp=sharing) | [meeting videos](https://www.youtube.com/playlist?list=PL3x6DOfs2NGhilW62WvHqPGAvyp1NAUcj)
+- Cohort 1 (ended 2026-02-25): [meeting videos](https://www.youtube.com/playlist?list=PL3x6DOfs2NGhilW62WvHqPGAvyp1NAUcj)
 
 <hr>
 
